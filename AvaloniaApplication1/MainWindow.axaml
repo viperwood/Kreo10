@@ -1,0 +1,1786 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1900" d:DesignHeight="1211"
+        x:Class="AvaloniaApplication1.MainWindow"
+        WindowState="Maximized"
+        Title="AvaloniaApplication1">
+                <Window.Styles>  <!--Создание стилей-->
+                        <Style Selector="TextBlock.h1">
+                                <Setter Property="FontSize" Value="25"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style Selector="TextBlock.h2">
+                                <Setter Property="FontSize" Value="49"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style Selector="TextBlock.h3">
+                                <Setter Property="FontSize" Value="18"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style Selector="TextBlock.h4">
+                                <Setter Property="FontSize" Value="16"/>
+                                <Setter Property="FontFamily" Value="merriweather-light, serif"/>
+                        </Style>
+                        <Style Selector="TextBlock.h5">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style Selector="TextBlock.h6">
+                                <Setter Property="FontSize" Value="20"/>
+                                <Setter Property="FontFamily" Value="merriweather-light, serif"/>
+                        </Style>
+                        <Style Selector="TextBlock.h7">
+                                <Setter Property="FontSize" Value="13"/>
+                                <Setter Property="FontFamily" Value="merriweather-light, serif"/>
+                        </Style>
+                        <Style Selector="TextBlock.h8">
+                                <Setter Property="FontSize" Value="30"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style Selector="TextBlock.h9">
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style Selector="TextBlock.h10">
+                                <Setter Property="FontSize" Value="12"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style Selector="TextBlock.h11">
+                                <Setter Property="FontSize" Value="27"/>
+                                <Setter Property="FontFamily" Value="merriweather-light, serif"/>
+                        </Style>
+                        <Style Selector="TextBlock.h12">
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontFamily" Value="merriweather-light, serif"/>
+                        </Style>
+                        <Style Selector="TextBlock.h13">
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="FontFamily" Value="merriweather-light, serif"/>
+                        </Style>
+        </Window.Styles>
+        <ScrollViewer> <!--Элемент управления прокручивающий свое содержимое -->
+                <Grid> <!--Элемент управления для объявления столбцов и строк-->
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="66"/>
+                                <RowDefinition Height="697"/>
+                                <RowDefinition Height="1045"/>
+                                <RowDefinition Height="1153"/>
+                                <RowDefinition Height="2014"/>
+                                <RowDefinition Height="599"/>
+                                <RowDefinition Height="1114"/>
+                                <RowDefinition Height="488"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition 
+                                        Width="65*"/>
+                                <ColumnDefinition 
+                                        Width="200*"/>
+                                <ColumnDefinition 
+                                        Width="200*"/>
+                                <ColumnDefinition 
+                                        Width="65*"/>
+                        </Grid.ColumnDefinitions>
+                        <!--бекграунд основного блока 1-->
+                        <StackPanel 
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="4"
+                                Margin="-400 -100 -500 -400"
+                                Background="Blue">  
+                                <Image
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        Source="images/bg1.jpg"> 
+                                </Image>
+                        </StackPanel>
+                        <!--бекграунд headera-->
+                        <StackPanel 
+                                Grid.Column="0" 
+                                    Grid.Row="0" 
+                                    Grid.ColumnSpan="4"
+                                    Background= "Black">
+                        </StackPanel>
+                        <!--header-->
+                        <StackPanel 
+                                Grid.Column="1" 
+                                Grid.Row="0" 
+                                Grid.ColumnSpan="2"
+                                Height="66"
+                                Width="1760"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                                <!--Блок горизонтальной ориентации-->
+                                <StackPanel
+                                        Margin="300 0 300 0"
+                                        Orientation="Horizontal">
+                                        <!--Лого-->
+                                        <StackPanel
+                                                Height="66"
+                                                Width="114"
+                                                Margin="15 0 30 0"
+                                                Background="#E4B101">
+                                                <Button 
+                                                        Height="66"
+                                                        Width="114">
+                                                        <Image
+                                                                Source="/images/logo/logoK@2x.png"> 
+                                                        </Image>     
+                                                </Button>
+                                        </StackPanel>
+                                        <!--Якоря-->
+                                        <Button
+                                                Height="66"
+                                                Width="72.86"
+                                                Foreground="White">
+                                                <TextBlock 
+                                                        Classes="h7"
+                                                        VerticalAlignment="Center"
+                                                        HorizontalAlignment="Center"
+                                                        Text="HOME."/>
+                                        </Button>
+                                        <Button
+                                                Height="66"
+                                                Width="84.89"
+                                                Foreground="White">
+                                                <TextBlock 
+                                                        Classes="h7"
+                                                        VerticalAlignment="Center"
+                                                        HorizontalAlignment="Center"
+                                                        Text="WORKS."/>
+                                        </Button>
+                                        <Button
+                                                Height="66"
+                                                Width="102.11"
+                                                Foreground="White">
+                                                <TextBlock 
+                                                        Classes="h7"
+                                                        VerticalAlignment="Center"
+                                                        HorizontalAlignment="Center"
+                                                        Text="SERVICES."/>
+                                        </Button>
+                                        <Button
+                                                Height="66"
+                                                Width="80.41"
+                                                Foreground="White">
+                                                <TextBlock 
+                                                        Classes="h7"
+                                                        VerticalAlignment="Center"
+                                                        HorizontalAlignment="Center"
+                                                        Text="ABOUT."/>
+                                        </Button>
+                                        <Button
+                                                Height="66"
+                                                Width="98.5"
+                                                Foreground="White">
+                                                <TextBlock Classes="h7"
+                                                           VerticalAlignment="Center"
+                                                           HorizontalAlignment="Center"
+                                                           Text="CONTACT."/>
+                                        </Button>
+                                        <Border 
+                                                Width="1"
+                                                Margin="30 0 0 15"
+                                                Height="66"
+                                                Background="#283436"/>
+                                        <!--В будующем ссылки на соцсети-->
+                                        <StackPanel
+                                                Background="Blue"
+                                                Margin="40 0 15 0"
+                                                Width="11"
+                                                Height="66">
+                                                
+                                        </StackPanel>
+                                        <StackPanel
+                                                Background="Blue"
+                                                Margin="4 0 15 0"
+                                                Width="18"
+                                                Height="66">
+                                                
+                                        </StackPanel>
+                                        <StackPanel
+                                                Background="Blue"
+                                                Margin="4 0 15 0"
+                                                Width="18"
+                                                Height="66">
+                                                
+                                        </StackPanel>
+                                </StackPanel>
+                        </StackPanel>
+                        <!--Основной блок 1-->
+                        <StackPanel 
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                HorizontalAlignment="Center"
+                                Margin="110 66 110 102">
+                                <StackPanel
+                                        HorizontalAlignment="Left">
+                                        <StackPanel
+                                                Margin="30 120 385 54">
+                                                <StackPanel
+                                                        HorizontalAlignment="Left"
+                                                        Width="537"
+                                                        Height="177"
+                                                        Margin="0 0 0 24">
+                                                        <!--Зоголовок-->
+                                                        <TextBlock 
+                                                                Classes="h2"
+                                                                Width="714"
+                                                                Height="234"
+                                                                HorizontalAlignment="Left"
+                                                                Foreground="White"
+                                                                LineHeight="63.7"
+                                                                TextWrapping="Wrap"
+                                                                Text="We are a small design studio dedicated to build great digital products.">
+                                                        </TextBlock>
+                                                </StackPanel>
+                                                <StackPanel
+                                                        Orientation="Horizontal">
+                                                        <Border 
+                                                                Width="100"
+                                                                Height="3"
+                                                                Margin="0 0 0 15"
+                                                                Background="#E4B101"/>
+                                                </StackPanel>
+                                                <!--Подпись-->
+                                                <TextBlock 
+                                                        Classes="h3"
+                                                        Width="600"
+                                                        Height="100"
+                                                        Margin="0 24 0 15"
+                                                        Foreground="White"
+                                                        LineHeight="30"
+                                                        TextWrapping="Wrap"
+                                                        HorizontalAlignment="Left"
+                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."/>
+                                        </StackPanel>
+                                        <!--Будующий слайдер-->
+                                        <StackPanel
+                                                Orientation="Horizontal"
+                                                Width="1100"
+                                                Height="30">
+                                                
+                                        </StackPanel>
+                                </StackPanel>
+                        </StackPanel>
+                        <!--Бекграунд основного блока 2-->
+                        <StackPanel
+                                Grid.Column="0"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="4"
+                                Background = "#111417"/>
+                        <!--Основной блок 2-->
+                        <StackPanel 
+                                Grid.Column="1"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="2"
+                                HorizontalAlignment="Center"
+                                Orientation="Vertical">
+                                <!--Якорь-->
+                                <StackPanel
+                                        Orientation="Horizontal"
+                                        Width="200"
+                                        Height="54"
+                                        Margin="680 -27 0 0">
+                                        <Button
+                                                Width="200"
+                                                Height="54"
+                                                Background="#E64E04">
+                                                <TextBlock 
+                                                        Classes="h10"
+                                                        Foreground="White"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                                        Text="More About Us"/>
+                                        </Button>
+                                </StackPanel>
+                                <StackPanel
+                                        Margin="130 120 130 0">
+                                        <!--Заголовок-->
+                                        <StackPanel
+                                                Margin="0 18 0 30"
+                                                Orientation="Horizontal">
+                                                <TextBlock 
+                                                        Classes="h5"
+                                                        Height="18"
+                                                        Foreground="White"
+                                                        HorizontalAlignment="Left"
+                                                        Text="OUR LATEST PROJECTS"/>
+                                                <TextBlock 
+                                                        Classes="h5"
+                                                        Foreground="#E4B101"
+                                                        HorizontalAlignment="Left"
+                                                        Text="."/>
+                                        </StackPanel>
+                                        <Border 
+                                                Width="100"
+                                                Height="3"
+                                                Margin="0 11 0 30"
+                                                HorizontalAlignment="Left"
+                                                Background="#283436"/>
+                                        <!--Текст-->
+                                        <TextBlock 
+                                                Classes="h6"
+                                                Width="940"
+                                                Height="108"
+                                                Margin="0 15 0 15"
+                                                Foreground="#575859"
+                                                LineHeight="36"
+                                                TextWrapping="Wrap"
+                                                HorizontalAlignment="Left"
+                                                Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                </StackPanel>
+                                <!--Галерея-->
+                                <StackPanel
+                                        Width="1260"
+                                        Height="630"
+                                        HorizontalAlignment="Center"
+                                        Margin="50 24 50 0">
+                                        <StackPanel
+                                                Margin="0 36 0 0">
+                                                <StackPanel
+                                                        Orientation="Horizontal">
+                                                        <StackPanel
+                                                                Width="315"
+                                                                Height="315"
+                                                                HorizontalAlignment="Left"
+                                                                Background="Blue">
+                                                                <Image
+                                                                        Source="/images/portfolio/underwater.jpg"> 
+                                                                </Image>
+                                                        </StackPanel>
+                                                        <StackPanel
+                                                                Width="315"
+                                                                Height="315"
+                                                                HorizontalAlignment="Left"
+                                                                Background="Blue">
+                                                                <Image
+                                                                        Source="/images/portfolio/hotel.jpg"> 
+                                                                </Image>
+                                                        </StackPanel>
+                                                        <StackPanel
+                                                                Width="315"
+                                                                Height="315"
+                                                                HorizontalAlignment="Left"
+                                                                Background="Blue">
+                                                                <Image
+                                                                        Source="/images/portfolio/beetle.jpg"> 
+                                                                </Image>
+                                                        </StackPanel>
+                                                        <StackPanel
+                                                                Width="315"
+                                                                Height="315"
+                                                                HorizontalAlignment="Left"
+                                                                Background="Blue">
+                                                                <Image
+                                                                        Source="/images/portfolio/banjo-player.jpg"> 
+                                                                </Image>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                                <StackPanel
+                                                        Orientation="Horizontal">
+                                                        <StackPanel
+                                                                Width="315"
+                                                                Height="315"
+                                                                HorizontalAlignment="Left"
+                                                                Background="Blue">
+                                                                <Image
+                                                                        Source="/images/portfolio/lighthouse.jpg"> 
+                                                                </Image>
+                                                        </StackPanel>
+                                                        <StackPanel
+                                                                Width="315"
+                                                                Height="315"
+                                                                HorizontalAlignment="Left"
+                                                                Background="Blue">
+                                                                <Image
+                                                                        Source="/images/portfolio/girl.jpg"> 
+                                                                </Image>
+                                                        </StackPanel>
+                                                        <StackPanel
+                                                                Width="315"
+                                                                Height="315"
+                                                                HorizontalAlignment="Left"
+                                                                Background="Blue">
+                                                                <Image
+                                                                        Source="/images/portfolio/coffee.jpg"> 
+                                                                </Image>
+                                                        </StackPanel>
+                                                        <StackPanel
+                                                                Width="315"
+                                                                Height="315"
+                                                                HorizontalAlignment="Left"
+                                                                Background="Blue">
+                                                                <Image
+                                                                        Source="/images/portfolio/judah.jpg"> 
+                                                                </Image>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </StackPanel>
+                        </StackPanel>
+                        <!--бекграунд основного блока 3-->
+                        <StackPanel
+                                Grid.Column="0"
+                                Grid.Row="3"
+                                Grid.ColumnSpan="4"
+                                Background = "#12151B"/>
+                        <!--Основной блок 3-->
+                        <StackPanel
+                                Grid.Column="1"
+                                Grid.Row="3"
+                                Grid.ColumnSpan="2"
+                                Orientation="Vertical">
+                                <StackPanel
+                                        HorizontalAlignment="Center"
+                                        Margin="0 120 0 120">
+                                        <StackPanel
+                                                Width="1140"
+                                                Height="234"
+                                                Margin="130 0 130 0">
+                                                <!--Заголовок-->
+                                                <StackPanel 
+                                                            Orientation="Horizontal"
+                                                            Margin="0 18 0 30">
+                                                        <TextBlock  
+                                                                Classes="h5"
+                                                                Height="18"
+                                                                Foreground="White"
+                                                                HorizontalAlignment="Left"
+                                                                Text="OUR AWESOME SERVICES"/>
+                                                        <TextBlock  
+                                                                Classes="h5"
+                                                                Foreground="#E4B101"
+                                                                HorizontalAlignment="Left"
+                                                                Text="."/>
+                                                </StackPanel>
+                                                <Border 
+                                                        Width="100"
+                                                        Height="2"
+                                                        HorizontalAlignment="Left"
+                                                        Background="#283436"
+                                                        Margin="0 11 0 30"/>
+                                                <!--Текст-->
+                                                <TextBlock  
+                                                        Classes="h6"
+                                                        Width="930"
+                                                        Height="120"
+                                                        Foreground="#575859"
+                                                        Margin="0 15 0 15"
+                                                        HorizontalAlignment="Left"
+                                                        LineHeight="36"
+                                                        TextWrapping="Wrap"
+                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                        </StackPanel>
+                                        <!--Сервисы-->
+                                        <StackPanel
+                                                Margin="126 0 126 0"
+                                                HorizontalAlignment="Center">
+                                                <StackPanel
+                                                        Orientation="Horizontal">
+                                                        <!--Блок-->
+                                                        <StackPanel
+                                                                Margin="22 0 22 6"
+                                                                Width="381"
+                                                                Height="330">
+                                                                <!--Заголовок-->
+                                                                <TextBlock 
+                                                                        Classes="h3"
+                                                                        Margin="0 18 0 6"
+                                                                        Height="40"
+                                                                        Foreground="#E4B101"
+                                                                        HorizontalAlignment="Left"
+                                                                        Text="Marketing."/>
+                                                                <!--Текст-->
+                                                                <TextBlock 
+                                                                        Classes="h4"
+                                                                        Width="330"
+                                                                        Height="250"
+                                                                        Foreground="#575859"
+                                                                        HorizontalAlignment="Left"
+                                                                        LineHeight="30"
+                                                                        TextWrapping="Wrap"
+                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                        </StackPanel>
+                                                        <!--Блок-->
+                                                        <StackPanel
+                                                                Margin="22 0 22 6"
+                                                                Width="381"
+                                                                Height="330">
+                                                                <!--Заголовок-->
+                                                                <TextBlock 
+                                                                        Classes="h3"
+                                                                        Margin="0 18 0 6"
+                                                                        Height="40"
+                                                                        Foreground="#E4B101"
+                                                                        HorizontalAlignment="Left"
+                                                                        Text="Videography."/>
+                                                                <!--Текст-->
+                                                                <TextBlock 
+                                                                        Classes="h4"
+                                                                        Width="330"
+                                                                        Height="250"
+                                                                        Foreground="#575859"
+                                                                        HorizontalAlignment="Left"
+                                                                        LineHeight="30"
+                                                                        TextWrapping="Wrap"
+                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                        </StackPanel>
+                                                        <!--Блок-->
+                                                        <StackPanel
+                                                                Margin="22 0 22 6"
+                                                                Width="381"
+                                                                Height="330">
+                                                                <!--Заголовок-->
+                                                                <TextBlock 
+                                                                        Classes="h3"
+                                                                        Margin="0 18 0 6"
+                                                                        Height="40"
+                                                                        Foreground="#E4B101"
+                                                                        HorizontalAlignment="Left"
+                                                                        Text="Photography."/>
+                                                                <!--Текст-->
+                                                                <TextBlock 
+                                                                        Classes="h4"
+                                                                        Width="330"
+                                                                        Height="250"
+                                                                        Foreground="#575859"
+                                                                        HorizontalAlignment="Left"
+                                                                        LineHeight="30"
+                                                                        TextWrapping="Wrap"
+                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                                <StackPanel
+                                                        Orientation="Horizontal">
+                                                        <!--Блок-->
+                                                        <StackPanel
+                                                                Margin="22 0 22 6"
+                                                                Width="381"
+                                                                Height="330">
+                                                                <!--Заголовок-->
+                                                                <TextBlock 
+                                                                        Classes="h3"
+                                                                        Margin="0 18 0 6"
+                                                                        Height="40"
+                                                                        Foreground="#E4B101"
+                                                                        HorizontalAlignment="Left"
+                                                                        Text="Branding."/>
+                                                                <!--Текст-->
+                                                                <TextBlock 
+                                                                        Classes="h4"
+                                                                        Width="330"
+                                                                        Height="250"
+                                                                        Foreground="#575859"
+                                                                        HorizontalAlignment="Left"
+                                                                        LineHeight="30"
+                                                                        TextWrapping="Wrap"
+                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+
+                                                        </StackPanel>
+                                                        <!--Блок-->
+                                                        <StackPanel
+                                                                Margin="22 0 22 6"
+                                                                Width="381"
+                                                                Height="330">
+                                                                <!--Заголовок-->
+                                                                <TextBlock 
+                                                                        Classes="h3"
+                                                                        Margin="0 18 0 6"
+                                                                        Height="40"
+                                                                        Foreground="#E4B101"
+                                                                        HorizontalAlignment="Left"
+                                                                        Text="Web Design."/>
+                                                                <!--Текст-->
+                                                                <TextBlock 
+                                                                        Classes="h4"
+                                                                        Width="330"
+                                                                        Height="250"
+                                                                        Foreground="#575859"
+                                                                        HorizontalAlignment="Left"
+                                                                        LineHeight="30"
+                                                                        TextWrapping="Wrap"
+                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                        </StackPanel>
+                                                        <!--Блок-->
+                                                        <StackPanel
+                                                                Margin="22 0 22 6"
+                                                                Width="381"
+                                                                Height="330">
+                                                                <!--Заголовок-->
+                                                                <TextBlock 
+                                                                        Classes="h3"
+                                                                        Margin="0 18 0 6"
+                                                                        Height="40"
+                                                                        Foreground="#E4B101"
+                                                                        HorizontalAlignment="Left"
+                                                                        Text="Web Development."/>
+                                                                <!--Текст-->
+                                                                <TextBlock 
+                                                                        Classes="h4"
+                                                                        Width="330"
+                                                                        Height="250"
+                                                                        Foreground="#575859"
+                                                                        HorizontalAlignment="Left"
+                                                                        LineHeight="30"
+                                                                        TextWrapping="Wrap"
+                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </StackPanel>
+                        </StackPanel>
+                        <!--Бекграунд основного блока 4-->
+                        <StackPanel
+                                Grid.Column="0"
+                                Grid.Row="4"
+                                Grid.ColumnSpan="4"
+                                Background = "#111417"/>
+                        <!--Основной блок 4-->
+                        <StackPanel
+                                Grid.Column="1"
+                                Grid.Row="4"
+                                Grid.ColumnSpan="2"
+                                HorizontalAlignment="Center"
+                                Margin="0 120 0 120"
+                                Orientation="Vertical">
+                                        <StackPanel
+                                                HorizontalAlignment="Center">
+                                                <StackPanel
+                                                        Margin="146 0 146 0">
+                                                        <StackPanel
+                                                                Margin="20 0 20 0">
+                                                                <!--Заголовок-->
+                                                                <StackPanel
+                                                                        Margin="0 18 0 30"
+                                                                        Orientation="Horizontal">
+                                                                        <TextBlock 
+                                                                                Classes="h5"
+                                                                                Height="18"
+                                                                                Foreground="White"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="WHO ARE WE"/>
+                                                                        <TextBlock 
+                                                                                Classes="h5"
+                                                                                Margin="3 0 -3 0"
+                                                                                Foreground="#E4B101"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="."/>
+                                                                </StackPanel>
+                                                                <Border 
+                                                                        Margin="0 11 0 30"
+                                                                        Width="100"
+                                                                        Height="2"
+                                                                        HorizontalAlignment="Left"
+                                                                        Background="#283436"/>
+                                                                <!--Текст-->
+                                                                <TextBlock 
+                                                                        Classes="h6"
+                                                                        Margin="0 15 0 15"
+                                                                        Foreground="#575859"
+                                                                        HorizontalAlignment="Left"
+                                                                        LineHeight="36"
+                                                                        TextWrapping="Wrap"
+                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                        </StackPanel>
+                                                        <!--Сервисы-->
+                                                        <StackPanel
+                                                                Margin="0 12 0 0">
+                                                                <StackPanel
+                                                                        Orientation="Horizontal">
+                                                                        <!--Блок-->
+                                                                        <StackPanel
+                                                                                Width="570"
+                                                                                Margin="20 0 20 0"
+                                                                                Height="234">
+                                                                                <!--Заголовок-->
+                                                                                <TextBlock 
+                                                                                        Classes="h3"
+                                                                                        Margin="0 18 0 6"
+                                                                                        Height="40"
+                                                                                        Foreground="#E4B101"
+                                                                                        HorizontalAlignment="Left"
+                                                                                        Text="Our Process."/>
+                                                                                <!--Текст-->
+                                                                                <TextBlock 
+                                                                                        Classes="h4"
+                                                                                        Width="500"
+                                                                                        Height="160"
+                                                                                        Margin="0 15 0 15"
+                                                                                        Foreground="#575859"
+                                                                                        HorizontalAlignment="Left"
+                                                                                        LineHeight="30"
+                                                                                        TextWrapping="Wrap"
+                                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                                        </StackPanel>
+                                                                        <!--Блок-->
+                                                                        <StackPanel
+                                                                                Width="570"
+                                                                                Margin="20 0 20 0"
+                                                                                Height="234">
+                                                                                <!--Заголовок-->
+                                                                                <TextBlock 
+                                                                                        Classes="h3"
+                                                                                        Margin="0 18 0 6"
+                                                                                        Height="40"
+                                                                                        Foreground="#E4B101"
+                                                                                        HorizontalAlignment="Left"
+                                                                                        Text="Our Approach."/>
+                                                                                <!--Текст-->
+                                                                                <TextBlock 
+                                                                                        Classes="h4"
+                                                                                        Width="500"
+                                                                                        Height="160"
+                                                                                        Margin="0 15 0 15"
+                                                                                        Foreground="#575859"
+                                                                                        HorizontalAlignment="Left"
+                                                                                        LineHeight="30"
+                                                                                        TextWrapping="Wrap"
+                                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                                        </StackPanel>
+                                                                </StackPanel>
+                                                                <StackPanel
+                                                                        Orientation="Horizontal">
+                                                                        <!--Блок-->
+                                                                        <StackPanel
+                                                                                Width="570"
+                                                                                Margin="20 0 20 0"
+                                                                                Height="234">
+                                                                                <!--Заголовок-->
+                                                                                <TextBlock 
+                                                                                        Classes="h3"
+                                                                                        Margin="0 18 0 6"
+                                                                                        Height="40"
+                                                                                        Foreground="#E4B101"
+                                                                                        HorizontalAlignment="Left"
+                                                                                        Text="Our Goal."/>
+                                                                                <!--Текст-->
+                                                                                <TextBlock 
+                                                                                        Classes="h4"
+                                                                                        Width="500"
+                                                                                        Height="160"
+                                                                                        Margin="0 15 0 15"
+                                                                                        Foreground="#575859"
+                                                                                        HorizontalAlignment="Left"
+                                                                                        LineHeight="30"
+                                                                                        TextWrapping="Wrap"
+                                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                                        </StackPanel>
+                                                                        <!--Блок-->
+                                                                        <StackPanel
+                                                                                Width="570"
+                                                                                Margin="20 0 20 0"
+                                                                                Height="234">
+                                                                                <!--Заголовок-->
+                                                                                <TextBlock 
+                                                                                        Classes="h3"
+                                                                                        Margin="0 18 0 6"
+                                                                                        Height="40"
+                                                                                        Foreground="#E4B101"
+                                                                                        HorizontalAlignment="Left"
+                                                                                        Text="Our Mission."/>
+                                                                                <!--Текст-->
+                                                                                <TextBlock 
+                                                                                        Classes="h4"
+                                                                                        Width="500"
+                                                                                        Height="160"
+                                                                                        Margin="0 15 0 15"
+                                                                                        Foreground="#575859"
+                                                                                        HorizontalAlignment="Left"
+                                                                                        LineHeight="30"
+                                                                                        TextWrapping="Wrap"
+                                                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."/>
+                                                                        </StackPanel>
+                                                                </StackPanel>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                        </StackPanel>
+                                                <StackPanel
+                                                        Margin="146 30 146 0">
+                                                        <StackPanel
+                                                                Margin="20 0 20 0">
+                                                                <!--Заголовок-->
+                                                                <StackPanel
+                                                                        Orientation="Horizontal"
+                                                                        Margin="0 18 0 30">
+                                                                        <TextBlock 
+                                                                                Classes="h5"
+                                                                                Height="18"
+                                                                                Foreground="White"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="MEET OUR TEAM"/>
+                                                                        <TextBlock 
+                                                                                Classes="h5"
+                                                                                Margin="3 0 -3 0"
+                                                                                Foreground="#E4B101"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="."/>
+                                                                </StackPanel>
+                                                                        <Border 
+                                                                                Margin="0 11 0 30"
+                                                                                Width="100"
+                                                                                Height="2"
+                                                                                HorizontalAlignment="Left"
+                                                                                Background="#283436"/>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                                <!--Представление команды-->
+                                                <StackPanel
+                                                        Width="1140"
+                                                        Height="581"
+                                                        HorizontalAlignment="Center"
+                                                        Orientation="Horizontal">
+                                                        <!--Сотрудник 1-->
+                                                        <StackPanel
+                                                                Width="245"
+                                                                Height="545"
+                                                                Margin="20 12 20 24"
+                                                                HorizontalAlignment="Left">
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="245"
+                                                                        Background="Blue">
+                                                                        <Image
+                                                                                Source="/images/team/member01-k.jpg"> 
+                                                                        </Image>
+                                                                </StackPanel>
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="64">
+                                                                        <!--ФИО-->
+                                                                        <TextBlock 
+                                                                                Classes="h3"
+                                                                                Height="24"
+                                                                                Margin="0 18 0 0"
+                                                                                Foreground="#E4B101"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="Naruto Uzumaki"/>
+                                                                        <!--Должность-->
+                                                                        <TextBlock 
+                                                                                Classes="h7"
+                                                                                Height="24"
+                                                                                Foreground="White"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="Creative Director"/>
+                                                                </StackPanel>
+                                                                <!--Немного о себе-->
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="180"
+                                                                        Margin="0 15 0 15">
+                                                                        <TextBlock 
+                                                                                Classes="h4"
+                                                                                Foreground="#575859"
+                                                                                HorizontalAlignment="Left"
+                                                                                Width="235"
+                                                                                Height="190"
+                                                                                LineHeight="30"
+                                                                                TextWrapping="Wrap"
+                                                                                Text="Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."/>
+                                                                </StackPanel>
+                                                                <!--Контактные соцсети-->
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="18"
+                                                                        Orientation="Horizontal">
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="9"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="14"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="14"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="13"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="13"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                </StackPanel>
+                                                        </StackPanel>
+                                                        <!--Сотрудник 2-->
+                                                        <StackPanel
+                                                                Width="245"
+                                                                Height="545"
+                                                                Margin="20 12 20 24"
+                                                                HorizontalAlignment="Left">
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="245"
+                                                                        Background="Blue">
+                                                                        <Image
+                                                                                Source="/images/team/member03-k.jpg"> 
+                                                                        </Image>
+                                                                </StackPanel>
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="64">
+                                                                        <!--ФИО-->
+                                                                        <TextBlock 
+                                                                                Classes="h3"
+                                                                                Height="24"
+                                                                                Margin="0 18 0 0"
+                                                                                Foreground="#E4B101"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="Sasuke Uchiha"/>
+                                                                        <!--Должность-->
+                                                                        <TextBlock 
+                                                                                Classes="h7"
+                                                                                Height="24"
+                                                                                Foreground="White"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="Lead Designer"/>
+                                                                </StackPanel>
+                                                                <!--Немного о себе-->
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="180"
+                                                                        Margin="0 15 0 15">
+                                                                        <TextBlock 
+                                                                                Classes="h4"
+                                                                                Width="235"
+                                                                                Height="190"
+                                                                                Foreground="#575859"
+                                                                                HorizontalAlignment="Left"
+                                                                                LineHeight="30"
+                                                                                TextWrapping="Wrap"
+                                                                                Text="Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."/>
+                                                                </StackPanel>
+                                                                <!--Контактные соцсети-->
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="18"
+                                                                        Orientation="Horizontal">
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="9"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="14"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="14"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="13"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="13"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                </StackPanel>
+                                                        </StackPanel>
+                                                        <!--Сотрудник 3-->
+                                                         <StackPanel
+                                                                Width="245"
+                                                                Height="545"
+                                                                Margin="20 12 20 24"
+                                                                HorizontalAlignment="Left">
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="245"
+                                                                        Background="Blue">
+                                                                        <Image
+                                                                                Source="/images/team/member04-k.jpg"> 
+                                                                        </Image>
+                                                                </StackPanel>
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="64">
+                                                                        <!--ФИО-->
+                                                                        <TextBlock 
+                                                                                Classes="h3"
+                                                                                Height="24"
+                                                                                Margin="0 18 0 0"
+                                                                                Foreground="#E4B101"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="Shikamaru Nara"/>
+                                                                        <!--Должность-->
+                                                                        <TextBlock 
+                                                                                Classes="h7"
+                                                                                Height="24"
+                                                                                Foreground="White"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="Designer"/>
+                                                                </StackPanel>
+                                                                 <!--Немного о себе-->
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="180"
+                                                                        Margin="0 15 0 15">
+                                                                        <TextBlock 
+                                                                                Classes="h4"
+                                                                                Width="235"
+                                                                                Height="190"
+                                                                                Foreground="#575859"
+                                                                                HorizontalAlignment="Left"
+                                                                                LineHeight="30"
+                                                                                TextWrapping="Wrap"
+                                                                                Text="Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."/>
+                                                                </StackPanel>
+                                                                 <!--Контактные соцсети-->
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="18"
+                                                                        Orientation="Horizontal">
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="9"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="14"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="14"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="13"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="13"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                </StackPanel>
+                                                        </StackPanel>
+                                                        <!--Сотрудник 4-->
+                                                        <StackPanel
+                                                                Width="245"
+                                                                Height="545"
+                                                                Margin="20 12 20 24"
+                                                                HorizontalAlignment="Left">
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="245"
+                                                                        Background="Blue">
+                                                                        <Image
+                                                                                Source="/images/team/member05-k.jpg"> 
+                                                                        </Image>
+                                                                </StackPanel>
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="64">
+                                                                        <!--ФИО-->
+                                                                        <TextBlock 
+                                                                                Classes="h3"
+                                                                                Height="24"
+                                                                                Margin="0 18 0 0"
+                                                                                Foreground="#E4B101"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="Sakura Haruno"/>
+                                                                        <!--Должность-->
+                                                                        <TextBlock 
+                                                                                Classes="h7"
+                                                                                Height="24"
+                                                                                Foreground="White"
+                                                                                HorizontalAlignment="Left"
+                                                                                Text="Designer"/>
+                                                                </StackPanel>
+                                                                <!--Немного о себе-->
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="180"
+                                                                        Margin="0 15 0 15">
+                                                                        <TextBlock 
+                                                                                Classes="h4"
+                                                                                Width="235"
+                                                                                Height="190"
+                                                                                Foreground="#575859"
+                                                                                HorizontalAlignment="Left"
+                                                                                LineHeight="30"
+                                                                                TextWrapping="Wrap"
+                                                                                Text="Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."/>
+                                                                </StackPanel>
+                                                                <!--Контактные соцсети-->
+                                                                <StackPanel
+                                                                        Width="245"
+                                                                        Height="18"
+                                                                        Orientation="Horizontal">
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="9"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="14"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="14"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="13"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                        <StackPanel
+                                                                                Margin="4 0 15 0"
+                                                                                Width="13"
+                                                                                Height="18"
+                                                                                Background="Blue"
+                                                                                HorizontalAlignment="Left">
+                                                                        </StackPanel>
+                                                                </StackPanel>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                                <StackPanel
+                                                        Margin="126 66 126 0">
+                                                        <Border 
+                                                                Margin="0 0 0 36"
+                                                                Width="1140"
+                                                                Height="1"
+                                                                HorizontalAlignment="Center"
+                                                                Background="#283436"/>
+                                                        <StackPanel
+                                                                HorizontalAlignment="Center"
+                                                                Margin="20 0 20 0">
+                                                                <StackPanel
+                                                                        Margin="4 0 15 0"
+                                                                        Width="1140"
+                                                                        Height="270"
+                                                                        HorizontalAlignment="Center">
+                                                                        <StackPanel
+                                                                                Width="1100"
+                                                                                Height="270"
+                                                                                HorizontalAlignment="Center">
+                                                                                <StackPanel
+                                                                                        Margin="110 18 110 24"
+                                                                                        Width="880"
+                                                                                        Height="36">
+                                                                                        <!--Заголовок-->
+                                                                                        <StackPanel
+                                                                                                Orientation="Horizontal"
+                                                                                                HorizontalAlignment="Center">
+                                                                                                <TextBlock 
+                                                                                                        Classes="h8"
+                                                                                                        Height="36"
+                                                                                                        Foreground="White"
+                                                                                                        HorizontalAlignment="Center"
+                                                                                                        Text="Styleshout Recommends Dreamhost"/>
+                                                                                                <TextBlock 
+                                                                                                        Classes="h8"
+                                                                                                        Height="36"
+                                                                                                        Foreground="#E4B101"
+                                                                                                        HorizontalAlignment="Center"
+                                                                                                        Text="."/>
+                                                                                        </StackPanel>
+                                                                                </StackPanel>
+                                                                                <!--Текст-->
+                                                                                <StackPanel
+                                                                                        Margin="137 15 137 15"
+                                                                                        Width="825"
+                                                                                        Height="72">
+                                                                                        <StackPanel
+                                                                                                Width="730"
+                                                                                                Height="72"
+                                                                                                HorizontalAlignment="Center">
+                                                                                                <StackPanel
+                                                                                                        HorizontalAlignment="Center"
+                                                                                                        Orientation="Horizontal">
+                                                                                                        <TextBlock 
+                                                                                                                Classes="h6"
+                                                                                                                Foreground="#575859"
+                                                                                                                LineHeight="36"
+                                                                                                                Text="Looking for an awesome and reliable webhosting? Try "/>
+                                                                                                        <TextBlock 
+                                                                                                                Classes="h6"
+                                                                                                                Foreground="White"
+                                                                                                                LineHeight="36"
+                                                                                                                Text="DreamHost"/>
+                                                                                                        <TextBlock 
+                                                                                                                Classes="h6"
+                                                                                                                Foreground="#575859"
+                                                                                                                LineHeight="36"
+                                                                                                                Text=". Get "/>
+                                                                                                        <TextBlock 
+                                                                                                                Classes="h6"
+                                                                                                                Foreground="White"
+                                                                                                                LineHeight="36"
+                                                                                                                Text="$50 off "/>
+                                                                                                </StackPanel>
+                                                                                                <StackPanel
+                                                                                                        HorizontalAlignment="Center"
+                                                                                                        Orientation="Horizontal">
+                                                                                                        <TextBlock 
+                                                                                                                Classes="h6"
+                                                                                                                Foreground="#575859"
+                                                                                                                LineHeight="36"
+                                                                                                                Text="when you sign up with the promocode "/>
+                                                                                                        <TextBlock 
+                                                                                                                Classes="h6"
+                                                                                                                Foreground="White"
+                                                                                                                LineHeight="36"
+                                                                                                                Text="styleshout"/>
+                                                                                                        <TextBlock 
+                                                                                                                Classes="h6"
+                                                                                                                Foreground="#575859"
+                                                                                                                LineHeight="36"
+                                                                                                                Text="."/>
+                                                                                                </StackPanel>
+                                                                                        </StackPanel>
+                                                                                </StackPanel>
+                                                                                <!--Кнопка перехода на другую страницу-->
+                                                                                <StackPanel
+                                                                                        Width="1100"
+                                                                                        Height="60">
+                                                                                        <Button 
+                                                                                                Background="#E64E04"
+                                                                                                Width="400"
+                                                                                                Height="60"
+                                                                                                HorizontalAlignment="Center"
+                                                                                                Click="Button_OnClick"><!--Название кнопки-->
+                                                                                                <TextBlock 
+                                                                                                        Classes="h5"
+                                                                                                        Foreground="White"
+                                                                                                        VerticalAlignment="Center"
+                                                                                                        HorizontalAlignment="Center"
+                                                                                                        Text="Sign Up Now"/>
+                                                                                        </Button>
+                                                                                </StackPanel>
+                                                                        </StackPanel>
+                                                                </StackPanel>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                        </StackPanel>
+                        <!--Бекграунд основного блока 5-->
+                        <StackPanel
+                                Grid.Column="0"
+                                Grid.Row="5"
+                                Grid.ColumnSpan="4"
+                                Background="#E4B101"/>
+                        <!--Основной блок 5-->
+                        <StackPanel
+                                Grid.Column="1"
+                                Grid.Row="5"
+                                Grid.ColumnSpan="2"
+                                HorizontalAlignment="Center">
+                                <!--История клиентов-->
+                                <StackPanel
+                                        Margin="0 90 0 112"
+                                        HorizontalAlignment="Center"
+                                        Width="1345"
+                                        Height="240">
+                                        <!--Текст-->
+                                        <StackPanel
+                                                HorizontalAlignment="Center"
+                                                Width="850"
+                                                Height="256">
+                                                <TextBlock 
+                                                        Classes="h11"
+                                                        HorizontalAlignment="Center"
+                                                        Foreground="White"
+                                                        LineHeight="36"
+                                                        Text="Your work is going to fill a large part of your life, and the only"/>
+                                                <TextBlock 
+                                                        Classes="h11"
+                                                        HorizontalAlignment="Center"
+                                                        Foreground="White"
+                                                        LineHeight="36"
+                                                        Text="way to be truly satisfied is to do what you believe is great work."/>
+                                                <TextBlock 
+                                                        Classes="h11"
+                                                        HorizontalAlignment="Center"
+                                                        Foreground="White"
+                                                        LineHeight="36"
+                                                        Text="And the only way to do great work is to love what you do. If you"/>
+                                                <TextBlock 
+                                                        Classes="h11"
+                                                        HorizontalAlignment="Center"
+                                                        Foreground="White"
+                                                        LineHeight="36"
+                                                        Text="haven't found it yet, keep looking. Don't settle. As with all"/>
+                                                <TextBlock 
+                                                        Classes="h11"
+                                                        HorizontalAlignment="Center"
+                                                        Foreground="White"
+                                                        LineHeight="36"
+                                                        Text="matters of the heart, you'll know when you find it."/>
+                                        </StackPanel>
+                                        <!--Клиент-->
+                                        <StackPanel
+                                                Width="850"
+                                                Height="72"
+                                                HorizontalAlignment="Center">
+                                                <StackPanel
+                                                        HorizontalAlignment="Center"
+                                                        Orientation="Horizontal">
+                                                        <!--Аватар клиента-->
+                                                        <StackPanel
+                                                                Margin="0 0 10 0"
+                                                                Width="72"
+                                                                Height="72"
+                                                                Background="Blue">
+                                                                <Image
+                                                                        Source="/images/avatars/avatar-1.jpg"> 
+                                                                </Image>
+                                                        </StackPanel>
+                                                        <StackPanel
+                                                                VerticalAlignment="Center">
+                                                                <!--Имя клиента-->
+                                                                <TextBlock 
+                                                                        Classes="h4"
+                                                                        Foreground="White"
+                                                                        Text="STEVE JOBS"/>
+                                                                <!--Должность клиента-->
+                                                                <TextBlock 
+                                                                        Classes="h9"
+                                                                        Foreground="Black"
+                                                                        Text="CEO, Apple."/>
+                                                        </StackPanel>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </StackPanel>
+                        </StackPanel>
+                        <!--Бекграунд основного блока 6-->
+                        <StackPanel 
+                                Grid.Column="0" 
+                                Grid.Row="6"
+                                Background = "#12151B"
+                                Grid.ColumnSpan="4"/>
+                        <!--Основной блок 6-->
+                        <StackPanel
+                                Grid.Column="1" 
+                                Grid.Row="6"
+                                Grid.ColumnSpan="2"
+                                Margin="0 126 0 126"
+                                HorizontalAlignment="Center">
+                                <StackPanel
+                                        Margin="146 0 146 0">
+                                        <!--Заголовок-->
+                                        <StackPanel
+                                                Width="1100"
+                                                Height="30"
+                                                Orientation="Horizontal"
+                                                Margin="20 18 20 30">
+                                                <TextBlock 
+                                                        Classes="h5"
+                                                        Height="18"
+                                                        Foreground="White"
+                                                        HorizontalAlignment="Left"
+                                                        Text="GET IN TOUCH WITH US"/>
+                                                <TextBlock 
+                                                        Classes="h5"
+                                                        Width="6"
+                                                        Height="18"
+                                                        Foreground="#E4B101"
+                                                        HorizontalAlignment="Left"
+                                                        Text="."/>
+                                        </StackPanel>
+                                        <Border 
+                                                Margin="20 11 20 30"
+                                                Width="100"
+                                                Height="2"
+                                                HorizontalAlignment="Left"
+                                                Background="#283436"/>
+                                </StackPanel>
+                                <!--Обратная связь-->
+                                <StackPanel
+                                        Margin="146 0 146 0"
+                                        Orientation="Horizontal">
+                                        <StackPanel
+                                                Margin="20 12 35 30"
+                                                Width="515"
+                                                Height="744">
+                                                <!--Имя клиента-->
+                                                <StackPanel
+                                                        Margin="0 0 0 45"
+                                                        Width="515"
+                                                        Height="60"
+                                                        HorizontalAlignment="Left">
+                                                        <TextBox 
+                                                                Classes="h5"
+                                                                Width="475"
+                                                                Height="24"
+                                                                Text="Name"
+                                                                HorizontalAlignment="Left"/>
+                                                </StackPanel>
+                                                <!--Email клеента-->
+                                                <StackPanel
+                                                        Margin="0 0 0 45"
+                                                        Width="515"
+                                                        Height="60"
+                                                        HorizontalAlignment="Left">
+                                                        <TextBox 
+                                                                Classes="h5"
+                                                                Width="475"
+                                                                Height="24"
+                                                                Text="Email"
+                                                                HorizontalAlignment="Left"/>
+                                                </StackPanel>
+                                                <!--Тема вопроса-->
+                                                <StackPanel
+                                                        Margin="0 0 0 45"
+                                                        Width="515"
+                                                        Height="60"
+                                                        HorizontalAlignment="Left">
+                                                        <TextBox  
+                                                                Classes="h5"
+                                                                Width="475"     
+                                                                Height="24"
+                                                                Text="Subject"
+                                                                HorizontalAlignment="Left"/>
+                                                </StackPanel>
+                                                <!--Вопрос-->
+                                                <StackPanel
+                                                        Margin="0 0 0 45"
+                                                        Width="515"
+                                                        Height="321"
+                                                        HorizontalAlignment="Left">
+                                                        <TextBox 
+                                                                Classes="h5"
+                                                                Width="475"
+                                                                Height="240"
+                                                                Text="message"
+                                                                HorizontalAlignment="Left"/>
+                                                </StackPanel>
+                                                <!--Кнопка отправки вопроса-->
+                                                <StackPanel
+                                                        Width="515"
+                                                        Height="66"
+                                                        HorizontalAlignment="Left">
+                                                        <Button
+                                                                Margin="0 0 0 3"
+                                                                Width="475"
+                                                                Height="60"
+                                                                Background="#E4B101">
+                                                                <TextBlock 
+                                                                        Classes="h5"
+                                                                        Foreground="Black"
+                                                                        VerticalAlignment="Center"
+                                                                        HorizontalAlignment="Center"
+                                                                        Text="SUBMIT"/>
+                                                        </Button>
+                                                </StackPanel>
+                                        </StackPanel>
+                                        <!--Полезная информация-->
+                                        <StackPanel
+                                                Width="570"
+                                                Height="528"
+                                                Margin="35 0 20 0"
+                                                VerticalAlignment="Top">
+                                                <!--Текст-->
+                                                <TextBlock 
+                                                        Classes="h6"
+                                                        Width="470"
+                                                        Height="180"
+                                                        Margin="0 15 0 15"
+                                                        Foreground="#575859"
+                                                        HorizontalAlignment="Left"
+                                                        LineHeight="36"
+                                                        TextWrapping="Wrap"
+                                                        Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."/>
+                                                <!--Заголовок-->
+                                                <TextBlock 
+                                                        Classes="h3"
+                                                        Width="515"
+                                                        Height="36"
+                                                        Margin="0 18 0 6"
+                                                        Foreground="#E4B101"
+                                                        HorizontalAlignment="Left"
+                                                        Text="Come Visit"/>
+                                                <!--Адрес-->
+                                                <StackPanel
+                                                        Width="515"
+                                                        Height="90"
+                                                        Margin="0 15 0 15"
+                                                        HorizontalAlignment="Left">
+                                                        <TextBlock 
+                                                                Classes="h12"
+                                                                Foreground="#575859"
+                                                                HorizontalAlignment="Left"
+                                                                LineHeight="36"
+                                                                Text="1600 Amphitheatre Parkway"/>
+                                                        <TextBlock 
+                                                                Classes="h12"
+                                                                Foreground="#575859"
+                                                                HorizontalAlignment="Left"
+                                                                LineHeight="36"
+                                                                Text="Mountain View, CA"/>
+                                                        <TextBlock 
+                                                                Classes="h12"
+                                                                Foreground="#575859"
+                                                                HorizontalAlignment="Left"
+                                                                LineHeight="36"
+                                                                Text="94043 US"/>
+                                                </StackPanel>
+                                                <!--Заголовок-->
+                                                <TextBlock 
+                                                        Classes="h3"
+                                                        Width="515"
+                                                        Height="36"
+                                                        Margin="0 18 0 6"
+                                                        Foreground="#E4B101"
+                                                        HorizontalAlignment="Left"
+                                                        Text="Contact Numbers:"/>
+                                                <!--Контактные данные службы поддержки-->
+                                                <StackPanel
+                                                        Width="515"
+                                                        Height="90"
+                                                        Margin="0 15 0 15"
+                                                        HorizontalAlignment="Left">
+                                                        <TextBlock 
+                                                                Classes="h12"
+                                                                LineHeight="36"
+                                                                Foreground="#575859"
+                                                                HorizontalAlignment="Left"
+                                                                Text="Phone: (000) 555 1212"/>
+                                                        <TextBlock 
+                                                                Classes="h12"
+                                                                LineHeight="36"
+                                                                Foreground="#575859"
+                                                                HorizontalAlignment="Left"
+                                                                Text="Mobile: (000) 555 0100"/>
+                                                        <TextBlock 
+                                                                Classes="h12"
+                                                                LineHeight="36"
+                                                                Foreground="#575859"
+                                                                HorizontalAlignment="Left"
+                                                                Text="Fax: (000) 555 0101"/>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </StackPanel>
+                        </StackPanel>
+                        <!--Бекграунд footera-->
+                        <StackPanel 
+                                Grid.Column="0" 
+                                Grid.Row="7"
+                                Background = "#0F1215"
+                                Grid.ColumnSpan="4"/>
+                        <!--Кнопка возврата наверх страницы-->
+                        <StackPanel 
+                                Grid.Column="1" 
+                                Grid.Row="7"
+                                Grid.ColumnSpan="2">
+                                <Button
+                                        Margin="0 -21 0 450"
+                                        Width="200"
+                                        Height="54"
+                                        HorizontalAlignment="Center"
+                                        Background="#E64E04">
+                                        <TextBlock 
+                                                Classes="h10"
+                                                Foreground="White"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Text="Back to Top"/>
+                                </Button>
+                        </StackPanel>
+                        <!--footer-->
+                        <StackPanel 
+                                Grid.Column="1" 
+                                Grid.Row="7"
+                                Grid.ColumnSpan="2"
+                                Margin="110 60 110 24">
+                                <!--Соцсети-->
+                                <StackPanel
+                                        Margin="0 30 0 42"
+                                        Width="1100"
+                                        Height="38"
+                                        HorizontalAlignment="Center">
+                                        <StackPanel
+                                                HorizontalAlignment="Center"
+                                                Orientation="Horizontal">
+                                                <Button
+                                                        Width="32"
+                                                        Height="38"
+                                                        Background="Blue">
+                                                        
+                                                </Button>
+                                                <Button
+                                                        Margin="32 0 0 0"
+                                                        Width="32"
+                                                        Height="38"
+                                                        Background="Blue">
+                                                        
+                                                </Button>
+                                                <Button
+                                                        Margin="32 0 0 0"
+                                                        Width="32"
+                                                        Height="38"
+                                                        Background="Blue">
+                                                        
+                                                </Button>
+                                                <Button
+                                                        Margin="32 0 0 0"
+                                                        Width="38"
+                                                        Height="38"
+                                                        Background="Blue">
+                                                        
+                                                </Button>
+                                                <Button
+                                                        Margin="32 0 0 0"
+                                                        Width="32"
+                                                        Height="38"
+                                                        Background="Blue">
+                                                        
+                                                </Button>
+                                                <Button
+                                                        Margin="32 0 0 0"
+                                                        Width="32"
+                                                        Height="38"
+                                                        Background="Blue">
+                                                        
+                                                </Button>
+                                                <Button
+                                                        Margin="32 0 0 0"
+                                                        Width="32"
+                                                        Height="38"
+                                                        Background="Blue">
+                                                        
+                                                </Button>
+                                        </StackPanel>
+                                </StackPanel>
+                                <StackPanel
+                                        Margin="0 11 0 30"
+                                        HorizontalAlignment="Center">
+                                        <Border 
+                                                Width="400"
+                                                Height="1"
+                                                Background="#27292C"/>
+                                </StackPanel>
+                                <!--Логотип-->
+                                <StackPanel
+                                        HorizontalAlignment="Center">
+                                        <Image
+                                                Margin="0 0 0 21"
+                                                Width="100"
+                                                Height="23"
+                                                Source="/images/logo/logoK@2x.png"> 
+                                        </Image>
+                                </StackPanel>
+                                <!--Политика конфиденциальности-->
+                                <StackPanel
+                                        Margin="250 15 250 36"
+                                        Width="600"
+                                        Height="134"
+                                        HorizontalAlignment="Center">
+                                        <TextBlock 
+                                                Classes="h4"
+                                                HorizontalAlignment="Center"
+                                                Foreground="#27292C"
+                                                LineHeight="36"
+                                                Text="This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit"/>
+                                        <TextBlock 
+                                                Classes="h4"
+                                                HorizontalAlignment="Center"
+                                                Foreground="#27292C"
+                                                LineHeight="36"
+                                                Text="auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit"/>
+                                        <TextBlock 
+                                                Classes="h4"
+                                                HorizontalAlignment="Center"
+                                                Foreground="#27292C"
+                                                LineHeight="36"
+                                                Text="consequat ipsum, nec sagittis sem nibh id elit."/>
+                                </StackPanel>
+                                <!--Авторское право-->
+                                <StackPanel
+                                        HorizontalAlignment="Center"
+                                        Margin="18 39 18 21"
+                                        Width="1104"
+                                        Height="24">
+                                        <StackPanel
+                                                HorizontalAlignment="Center"
+                                                Orientation="Horizontal">
+                                                <TextBlock 
+                                                        Classes="h13"
+                                                        Margin="5 0 5 0"
+                                                        Foreground="#27292C"
+                                                        HorizontalAlignment="Center"
+                                                        Text="© Copyright 2015 KREO."/>
+                                                <StackPanel
+                                                        Margin="5 0 5 0"
+                                                        Orientation="Horizontal">
+                                                        <TextBlock 
+                                                                Classes="h13"
+                                                                Foreground="#27292C"
+                                                                HorizontalAlignment="Center"
+                                                                Text="Design by "/>
+                                                        <TextBlock 
+                                                                Classes="h13"
+                                                                Foreground="White"
+                                                                HorizontalAlignment="Center"
+                                                                Text="Styleshout"/>
+                                                        <TextBlock 
+                                                                Classes="h13"
+                                                                Foreground="#27292C"
+                                                                HorizontalAlignment="Center"
+                                                                Text="."/>
+                                                </StackPanel>
+                                        </StackPanel>
+                                </StackPanel>
+                        </StackPanel>
+                </Grid>
+        </ScrollViewer>
+</Window>
+

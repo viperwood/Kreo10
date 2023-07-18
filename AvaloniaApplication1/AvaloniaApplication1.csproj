@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectCapability Include="Avalonia" />
+        <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="0.10.21" />
+        <PackageReference Include="Avalonia.Desktop" Version="0.10.21" />
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.21" />
+        <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaXaml Remove="image\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="image\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="image\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Remove="image\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Remove="image\**" />
+      <AvaloniaResource Include="images\bg1.jpg" />
+      <None Remove="images\bg1.jpg" />
+      <None Remove="images\portfolio\banjo-player.jpg" />
+      <AvaloniaResource Include="images\portfolio\banjo-player.jpg" />
+      <None Remove="images\portfolio\beetle.jpg" />
+      <AvaloniaResource Include="images\portfolio\beetle.jpg" />
+      <None Remove="images\portfolio\coffee.jpg" />
+      <AvaloniaResource Include="images\portfolio\coffee.jpg" />
+      <None Remove="images\portfolio\girl.jpg" />
+      <AvaloniaResource Include="images\portfolio\girl.jpg" />
+      <None Remove="images\portfolio\hotel.jpg" />
+      <AvaloniaResource Include="images\portfolio\hotel.jpg" />
+      <None Remove="images\portfolio\judah.jpg" />
+      <AvaloniaResource Include="images\portfolio\judah.jpg" />
+      <None Remove="images\portfolio\lighthouse.jpg" />
+      <AvaloniaResource Include="images\portfolio\lighthouse.jpg" />
+      <None Remove="images\portfolio\underwater.jpg" />
+      <AvaloniaResource Include="images\portfolio\underwater.jpg" />
+      <AvaloniaResource Include="images\team\member01-k.jpg" />
+      <AvaloniaResource Include="images\team\member03-k.jpg" />
+      <AvaloniaResource Include="images\team\member04-k.jpg" />
+      <AvaloniaResource Include="images\team\member05-k.jpg" />
+      <None Remove="images\team\member01-k.jpg" />
+      <AvaloniaResource Include="images\team\member01-k.jpg" />
+      <None Remove="images\team\member03-k.jpg" />
+      <AvaloniaResource Include="images\team\member03-k.jpg" />
+      <None Remove="images\team\member04-k.jpg" />
+      <AvaloniaResource Include="images\team\member04-k.jpg" />
+      <None Remove="images\team\member05-k.jpg" />
+      <AvaloniaResource Include="images\team\member05-k.jpg" />
+      <None Remove="images\avatars\avatar-1.jpg" />
+      <AvaloniaResource Include="images\avatars\avatar-1.jpg" />
+      <None Remove="images\logo\logoK@2x.png" />
+      <AvaloniaResource Include="images\logo\logoK@2x.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="image\**" />
+    </ItemGroup>
+</Project>
